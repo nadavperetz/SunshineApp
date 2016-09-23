@@ -23,7 +23,8 @@ import java.util.List;
 
 public class ForecastFragment extends Fragment {
 
-    private ArrayAdapter<String> mForecastAdapter;
+    public ArrayAdapter<String> mForecastAdapter;
+    public List<String> weekForecast;
 
     public ForecastFragment() {
     }
@@ -47,7 +48,7 @@ public class ForecastFragment extends Fragment {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_refresh) {
-            FetchWeather fetchWeather = new FetchWeather();
+            FetchWeather fetchWeather = new FetchWeather(mForecastAdapter);
             fetchWeather.execute("94043");
             return true;
         }
@@ -69,7 +70,7 @@ public class ForecastFragment extends Fragment {
                 "Sun - Sunny - 88/63",
         };
 
-        List<String> weekForecast = new ArrayList<String>(Arrays.asList(forecastArray));
+        weekForecast = new ArrayList<String>(Arrays.asList(forecastArray));
 
         // Now that we have some dummy forecast data, create an ArrayAdapter.
         // The ArrayAdapter will take data from a source (like our dummy forecast) and
