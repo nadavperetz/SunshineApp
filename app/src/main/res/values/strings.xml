@@ -6,4 +6,17 @@
     <string name="title_activity_detail">DetailActivity</string>
     <string name="forecast_text">TextView</string>
     <string name="title_settings_activity">SettingsActivity</string>
+    <string name="pref_default_location_value">94043</string>
+    <string name="pref_location_title">Location</string>
+    <string name="pref_location_key">location</string>
+
+    <string name="pref_units_key">units</string>
+    <string name="pref_units_title">Temperature Units</string>
+    <string name="pref_unit_metric">metric</string>
+    <string name="pref_unit_imperial">imperial</string>
+    <string name="pref_unit_imperial_alias">Imperial</string>
+    <string name="pref_unit_metric_alias">Metric</string>
+
+     <string name="action_map">Map Location</string>
+    <string name="action_share">Share</string>
 </resources>

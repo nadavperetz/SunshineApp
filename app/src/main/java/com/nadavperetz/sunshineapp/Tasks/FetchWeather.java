@@ -53,6 +53,7 @@ public class FetchWeather extends AsyncTask<String, String[], String[]> {
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
         String post_code = strings[0];
+        String units = strings[1];
         // Will contain the raw JSON response as a string.
         String forecastJsonStr = null;
         String[] forecast = null;
@@ -69,7 +70,7 @@ public class FetchWeather extends AsyncTask<String, String[], String[]> {
             url_path.path("data/2.5/forecast/daily");
             url_path.appendQueryParameter("q", post_code);
             url_path.appendQueryParameter("mode", "json");
-            url_path.appendQueryParameter("units", "metric");
+            url_path.appendQueryParameter("units", units);
             url_path.appendQueryParameter("cnt", "7");
             url_path.appendQueryParameter("APPID", "a65fb759cecf02de6be4949f649bed95");
 
